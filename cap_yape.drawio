@@ -1,0 +1,40 @@
+<mxfile host="Electron">
+  <diagram name="Teorema CAP Yape" id="cap-yape">
+    <mxGraphModel dx="1414" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="920" pageHeight="620" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=18;fontStyle=1;" value="Teorema CAP aplicado a Yape — Junior Ortiz" vertex="1">
+          <mxGeometry height="30" width="560" x="180" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="C" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" value="CONSISTENCIA&#xa;(C)" vertex="1">
+          <mxGeometry height="80" width="180" x="390" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="A" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;fontStyle=1;" value="DISPONIBILIDAD&#xa;(A)" vertex="1">
+          <mxGeometry height="80" width="190" x="100" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="P" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;" value="TOLERANCIA A&#xa;PARTICIONES (P)" vertex="1">
+          <mxGeometry height="80" width="200" x="660" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="cp" edge="1" parent="1" source="C" style="endArrow=none;html=1;strokeColor=#82b366;strokeWidth=3;fontSize=13;fontStyle=1;fontColor=#3a7d3a;" target="P" value="CP ✓">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ap" edge="1" parent="1" source="A" style="endArrow=none;html=1;strokeColor=#6c8ebf;strokeWidth=3;fontSize=13;fontStyle=1;fontColor=#3b5b8c;" target="P" value="AP ✓">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ca" edge="1" parent="1" source="C" style="endArrow=none;html=1;strokeColor=#999999;strokeWidth=1;dashed=1;fontSize=11;fontColor=#999999;" target="A" value="CA ✗&#xa;(no aplica en&#xa;sistemas distribuidos)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_core" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;spacing=8;fontSize=11;" value="🔒 Core de pagos  →  CP&#xa;━━━━━━━&#xa;Elige: Consistencia + Tolerancia a particiones&#xa;Sacrifica: DISPONIBILIDAD&#xa;&#xa;Es preferible rechazar un pago un instante&#xa;que registrar un saldo inconsistente.&#xa;El dinero exige consistencia ante todo." vertex="1">
+          <mxGeometry height="150" width="290" x="615" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="card_hist" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacing=8;fontSize=11;" value="📜 Historial &quot;mis últimas 50 transacciones&quot;  →  AP&#xa;━━━━━━━&#xa;Elige: Disponibilidad + Tolerancia a particiones&#xa;Sacrifica: CONSISTENCIA fuerte (se acepta eventual)&#xa;&#xa;Si una transacción tarda 2s en aparecer no es grave.&#xa;Importa más que el usuario siempre vea su historial." vertex="1">
+          <mxGeometry height="130" width="430" x="30" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="nota" parent="1" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;spacing=8;" value="Nota: en un sistema distribuido la tolerancia a particiones (P)&#xa;es obligatoria, por lo que la elección real siempre es CP o AP." vertex="1">
+          <mxGeometry height="80" width="390" x="500" y="490" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
